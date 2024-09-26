@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-family: 'Calibri'; font-size: 16px;}
+        .container h1{font-size: 30px; margin: 0 0 30px; }
+        .board-container{width: 300px; display: flex; flex-wrap: wrap; box-sizing: border-box;}
+        .board-container div{width: 100px; height: 100px; float: left; border: 1px solid #000;box-sizing: border-box; position: relative;}
+        .board-container div:before{content: 'X'; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; justify-content: center; align-items: center;visibility: hidden; font-size: 50px;}
+        .board-container div.check:before{visibility: visible;}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Board</h1>
+        <div class="board-container">
+            <div onclick="clickBox('box1')" class="box" id="box1"></div>
+            <div onclick="clickBox('box2')" class="box" id="box2"></div>
+            <div onclick="clickBox('box3')" class="box" id="box3"></div>
+            <div onclick="clickBox('box4')" class="box" id="box4"></div>
+            <div onclick="clickBox('box5')" class="box" id="box5"></div>
+            <div onclick="clickBox('box6')" class="box" id="box6"></div>
+            <div onclick="clickBox('box7')" class="box" id="box7"></div>
+            <div onclick="clickBox('box8')" class="box" id="box8"></div>
+            <div onclick="clickBox('box9')" class="box" id="box9"></div>
+        </div>
+    </div>
+
+    <script>
+
+        var boxesId = document.querySelectorAll('.box');
+        // console.log(boxesId);
+        for(let i = 0; i < boxesId.length; i++){
+                let even = boxesId[i];
+                // function clickBox() {
+                    // boxesId.classList.add("check");
+                // }
+                // console.log(even);
+        }
+        function clickBox() {
+            boxesId.classList.add('check');
+        }
+
+        
+    </script>
+</body>
+
+</html>
