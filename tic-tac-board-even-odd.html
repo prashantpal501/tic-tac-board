@@ -11,6 +11,7 @@
         .board-container{width: 300px; display: flex; flex-wrap: wrap; box-sizing: border-box;}
         .board-container div{width: 100px; height: 100px; float: left; border: 1px solid #000;box-sizing: border-box; position: relative;}
         .board-container div:before{content: 'X'; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; justify-content: center; align-items: center;visibility: hidden; font-size: 50px;}
+        .board-container div:nth-child(even):before{content: 'O'; }
         .board-container div.check:before{visibility: visible;}
     </style>
 </head>
@@ -33,17 +34,17 @@
 
     <script>
 
-        var boxesId = document.querySelectorAll('.box');
+        // var boxesId = document.querySelectorAll('.box');
         // console.log(boxesId);
-        for(let i = 0; i < boxesId.length; i++){
-                let even = boxesId[i];
-                // function clickBox() {
-                    // boxesId.classList.add("check");
-                // }
-                // console.log(even);
-        }
-        function clickBox() {
-            boxesId.classList.add('check');
+        // for(let i = 0; i < boxesId.length; i++){
+        //         let even = boxesId[i];
+        //         // function clickBox() {
+        //             // boxesId.classList.add("check");
+        //         // }
+        //         console.log(even);
+        // }
+        function clickBox(boxId) {
+            document.getElementById(boxId).classList.add('check');
         }
 
         
